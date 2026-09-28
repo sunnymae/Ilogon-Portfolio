@@ -1,0 +1,338 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --peach: #f6b49b;
+    --peach-dark: #df8969;
+    --peach-light: #fff0e8;
+
+    --cream: #fffaf6;
+
+    --brown: #5a4036;
+    --muted: #806b63;
+
+    --white: #ffffff;
+
+    --border: #f1d3c4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--cream);
+
+    color: var(--brown);
+
+    line-height: 1.6;
+
+    /* Keeps footer at bottom */
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Makes main content fill available space */
+
+main {
+    flex: 1;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    background: rgba(255, 250, 246, 0.97);
+
+    border-bottom:
+        2px solid
+        var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+nav {
+    width: 90%;
+
+    max-width: 1100px;
+
+    min-height: 72px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.logo {
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: var(--brown);
+}
+
+.logo span {
+    color: var(--peach-dark);
+}
+
+.nav-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+.nav-links a {
+    color: var(--brown);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--peach-dark);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding:
+        11px 20px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.primary {
+    color: white;
+
+    background:
+        var(--peach-dark);
+}
+
+.primary:hover {
+    background: #ca7355;
+}
+
+.secondary {
+    color: var(--brown);
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+}
+
+.secondary:hover {
+    background:
+        var(--peach-light);
+}
+
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: var(--muted);
+}
+
+
+/* =========================
+   COMMON CARDS
+========================= */
+
+.card {
+    background: white;
+
+    border:
+        2px solid
+        var(--border);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(100, 60, 40, .06);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    transition: .2s;
+}
+
+.icon {
+    width: 55px;
+
+    height: 55px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        var(--peach-light);
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   PAGE HEADERS
+========================= */
+
+.page-header {
+    background:
+        var(--peach-light);
+
+    text-align: center;
+
+    padding:
+        55px 20px;
+
+    border-bottom:
+        2px solid
+        var(--border);
+}
+
+.page-header h1 {
+    font-size: 40px;
+
+    margin: 0 0 5px;
+}
+
+.page-header p {
+    color: var(--muted);
+
+    margin: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background:
+        var(--peach);
+
+    color:
+        #694b3e;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding:
+            15px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+}
